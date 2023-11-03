@@ -8,8 +8,9 @@ from .models import Event, Comment  # Import your models here
 
 @main_bp.route('/')
 def index():
-    # Fetch a list of events (you should implement this query)
+    # Fetch data from your database, including event image data
     events = Event.query.all()  # Replace with your actual query
+
     return render_template('index.html', events=events)
 
 @main_bp.route('/event_detail', defaults={'event_id': None})

@@ -45,12 +45,27 @@
         <img src="static/style/img/Heroimage.jpeg" alt="Hero Image" class="img-fluid">
     </div>
 
-    <!-- Main Content -->
     <div class="container mt-4">
-        <!-- Event Categories -->
         <h1>Browse Events by Category</h1>
         <div class="row">
-            <!-- Use a loop to populate event categories dynamically -->
+            {% for event in events %}
+                <div class="col-md-4">
+                    <!-- Display event title -->
+                    <h2>{{ event.title }}</h2>
+                    
+                    <!-- Display event date and status -->
+                    <p>Date: {{ event.date }}</p>
+                    <p>Status: {{ event.status }}</p>
+                    
+                    <!-- Display event image using data URL scheme -->
+                    <img src="data:image/jpeg;base64,{{ event.image_data }}" alt="{{ event.title }}" class="img-fluid">
+                    
+                    <!-- Display event description -->
+                    <p>{{ event.description }}</p>
+                    
+            
+                </div>
+            {% endfor %}
         </div>
 
         <!-- Search Box with Suggestions -->
