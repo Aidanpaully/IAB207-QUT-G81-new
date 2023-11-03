@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventBuddyPro - Create/Update Event</title>
+    <!--  Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--  custom CSS -->
+    <link rel="stylesheet" href="static/style/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">EventBuddyPro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="event_create_update.html">Create/Update Event</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="event_detail.html">Event Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="booking_history.html">Booking History</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<!-- Event Creation/Update Page -->
+<div class="container mt-4">
+    <h1>Create/Update Event</h1>
+    <form>
+        <!-- Event Image -->
+        <div class="form-group">
+            <label for="eventImage">Event Image</label>
+            <input type="file" class="form-control-file" id="eventImage" accept="image/*" required>
+        </div>
+
+        <!-- Event Name -->
+        <div class="form-group">
+            <label for="eventName">Event Name</label>
+            <input type="text" class="form-control" id="eventName" placeholder="Enter event name">
+        </div>
+
+        <!-- Event Date -->
+        <div class="form-group">
+            <label for="eventDate">Event Date</label>
+            <input type="date" class="form-control" id="eventDate">
+        </div>
+
+        <!-- Event Description -->
+        <div class="form-group">
+            <label for="eventDescription">Event Description</label>
+            <textarea class="form-control" id="eventDescription" rows="4" placeholder="Enter event description"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Create/Update Event</button>
+    </form>
+</div>
+    <!-- Include Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

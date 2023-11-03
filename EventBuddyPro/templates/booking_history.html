@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventBuddyPro - User Booking History</title>
+    
+    <!--  Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="static/style/style.css">
+</head>
+<body>
+    
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">EventBuddyPro</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="event_create_update.html">Create/Update Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="event_detail.html">Event Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking_history.html">Booking History</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    <!-- User Booking History Page -->
+    <div class="container mt-4">
+        <h1>User Booking History</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Event Name and Image</th>
+                    <th>Booking/Order ID</th>
+                    <th>Time and Date Booked</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- booking history items -->
+                <tr>
+                    <td><img src="static/style/img/event1.jpeg" alt="Symphony of Colors: Art Exhibition and Live Music" class="booking-image"><br>Symphony of Colors: Art Exhibition and Live Music</td>
+                    <td>Order123</td>
+                    <td>2023-09-15 14:30:00</td>
+                </tr>
+                <tr>
+                    <td><img src="static/style/img/event2.jpeg" alt="Cultural Extravaganza: Celebrating Diversity" class="booking-image"><br>Cultural Extravaganza: Celebrating Diversity</td>
+                    <td>Order456</td>
+                    <td>2023-09-16 18:45:00</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
