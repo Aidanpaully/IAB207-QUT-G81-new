@@ -1,10 +1,10 @@
-from flask import Blueprint, render_template , redirect, url_for
-from .forms import EventForm
+from flask import Blueprint, flash, render_template , redirect, url_for
+from .forms import EventForm, RegisterForm
 
 main_bp = Blueprint('main', __name__)
 from . import db
 # Import your models and other necessary dependencies
-from .models import Event, Comment  # Import your models here
+from .models import Event, Comment, User  # Import your models here
 
 @main_bp.route('/')
 def index():
@@ -27,6 +27,40 @@ def event_detail(event_id):
 
     # Handle the case where there is no event ID or the event does not exist
     return render_template('event_detail.html', event=None, comments=None)
+
+
+@main_bp.route('/register', methods=['GET', 'POST'])
+def register():
+    form = RegisterForm()
+    if form.validate_on_submit():
+        user = User(
+            name=form.name.data,
+            email=form.email.data,
+            password=form.password.data,
+            contact_number=form.contact_number.data,
+            address=form.address.data
+        )
+        db.session.add(user)
+        db.session.commit()
+        flash('Your account has been created!', 'success')
+        return redirect(url_for('login'))
+    return render_template('register.html', title='Register', form=form)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @main_bp.route('/event_create_update', methods=['GET', 'POST'])
 def create_event():
